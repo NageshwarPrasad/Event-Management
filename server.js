@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const Contact = require("./models/contact");
+const Contact = require("./vikalp-Backend/models/contact");
 
 const app = express();
 app.use(cors());
