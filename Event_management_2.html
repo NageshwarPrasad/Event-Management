@@ -785,13 +785,13 @@ else { // No parentheses needed after 'else'
     const message = e.target.message.value;
 
     try {
-      const response = await fetch("https://event-management-g8bp.onrender.com/api/contact", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ name, email, number, message }),
-     });
+        const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name, email, phone, message })
+      });
         
       const result = await response.json();
       if (result.success) {
